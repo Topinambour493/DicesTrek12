@@ -1,0 +1,108 @@
+*,::before,::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light: #F7F7F7;
+    --dark: #222222;
+    --backgroundColor: var(--light);
+    --textColor: var(--dark);
+}
+
+.light {
+  --backgroundColor: var(--light);
+  --textColor: var(--dark);
+}
+.dark {
+  --backgroundColor: var(--dark);
+  --textColor: var(--light);
+}
+
+body,html{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    height:100%;
+    width:100%;
+    flex-direction: column;
+    display: flex;
+}
+
+#switcher{
+    border-radius: 50%;
+    padding: 0 4px;
+    position: absolute;
+    top:10px;
+    left:10px;
+    cursor: pointer;
+}
+
+#switcher:hover{
+    background-color: var(--textColor);
+    color: var(--backgroundColor);
+}
+
+.dices{
+    height:70vmin;
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: default;
+}
+
+.dice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 60vmin;
+}
+
+#bottom{
+    display: flex;
+    justify-content: center;
+}
+
+.button-23 {
+  background-color: var(--backgroundColor);
+  border: 1px solid var(--textColor);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: var(--textColor);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.button-23:focus-visible {
+  box-shadow: var(--textColor) 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+.button-23:active {
+  background-color: var(--backgroundColor);
+  border-color: var(--textColor);
+  transform: scale(.96);
+}
+
+.button-23:disabled {
+  border-color: var(--backgroundColor);
+  color: var(--backgroundColor);
+  cursor: not-allowed;
+  opacity: 1;
+}
