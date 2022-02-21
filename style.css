@@ -59,6 +59,25 @@ body,html{
     font-size: 60vmin;
 }
 
+.previous_dices{
+  position: absolute;
+  top:68vmin;
+  right:10vmin;
+  height:10vmin;
+  width:25vmin;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: default;
+}
+
+.previous_dice{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 10vmin;
+}
+
 #bottom{
     display: flex;
     justify-content: center;
