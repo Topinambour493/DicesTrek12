@@ -12,3 +12,11 @@ function roll_dices(){
 
 document.getElementById("roll").addEventListener("click",roll_dices);
 
+
+//lance les dés une fois la touche espace relaché
+document.body.onkeyup = function(e){
+	if (e.which == 32 || e.keyCode == 32)
+	{ 
+		roll_dices();
+	}
+}
